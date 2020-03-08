@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-lg-12">
+		{% for pre in preguntas %}
+			<div class="block block-rounded">
+				<div class="block-content">
+					<ul class="list-group push">
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							{{ pre.pregunta }}
+							<span class="badge badge-pill badge-secondary">{{ pre.numero }}</span>
+						</li>
+					</ul>
+					<div>
+            {% for res in respuestas %}
+						<div class="form-check">
+							<label class="css-control css-control-sm css-control-secondary css-radio">
+								<input type="radio" value="{{ res.valor }}" class="css-control-input" name="pre{{ pre.numero }}"required="">
+								<span class="css-control-indicator"></span>
+								{{ res.respuesta }}
+							</label>
+						</div>
+            {% endfor %}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	
+
+
+
+	</div>
+</div>
