@@ -16,7 +16,7 @@ class PreguntasController extends AbstractController{
   public function index(){
     return $this->render('preguntas/index.html.twig', [
         'controller_name' => 'PreguntasController',
-        'preguntas'       => 
+        'preguntas'       => ''
     ]);
   }
 }
